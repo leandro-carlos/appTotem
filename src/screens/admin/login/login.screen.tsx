@@ -1,3 +1,4 @@
+import { Alert, Pressable } from "react-native/";
 import Background from "../../../components/Background/Background";
 import useLoginController from "../../../controllers/useLoginController";
 import {
@@ -35,7 +36,16 @@ export default function Login() {
             <ButtonText>Acessar</ButtonText>
           </Button>
 
-          <TextForgot>Esqueceu a senha?{`\n`}Clique aqui!</TextForgot>
+          <Pressable
+            onPress={() =>
+              Alert.alert(
+                "Esqueceu a senha?",
+                "Entre em contato com o administrador para resgatar a senha."
+              )
+            }
+          >
+            <TextForgot>Esqueceu a senha?{`\n`}Clique aqui!</TextForgot>
+          </Pressable>
         </ContenModal>
       </Container>
     </Background>

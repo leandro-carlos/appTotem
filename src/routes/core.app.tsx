@@ -9,6 +9,8 @@ import AdminNavigation from "./admin.navigation";
 export default function App() {
   const { Navigator, Screen } = createNativeStackNavigator();
 
+  // cxoinsok
+
   return (
     <NavigationContainer>
       <Navigator

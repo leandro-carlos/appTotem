@@ -26,8 +26,13 @@ export default function useAdminController() {
       });
   }
 
+  function nextReport() {
+    navigation.navigate("Report");
+  }
+
   return {
     nextPassword,
     loading,
+    nextReport,
   };
 }

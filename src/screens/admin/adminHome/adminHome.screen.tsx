@@ -13,7 +13,7 @@ import {
 import { ActivityIndicator } from "react-native";
 
 export default function AdminHome() {
-  const { nextPassword, loading } = useAdminController();
+  const { nextPassword, loading, nextReport } = useAdminController();
   return (
     <Background>
       <Header tittle="Gerenciar" />
@@ -28,7 +28,7 @@ export default function AdminHome() {
             </ButtonText>
           </ButtonOptions>
 
-          <ButtonOptions>
+          <ButtonOptions onPress={nextReport}>
             <ButtonText>RELATÓRIOS</ButtonText>
           </ButtonOptions>
 

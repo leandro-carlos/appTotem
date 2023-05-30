@@ -9,8 +9,6 @@ interface BackgroundProps {
 }
 
 export default function Background({ children }: BackgroundProps) {
-  const sourceImage = require("../../assets/background.png");
-
   return (
     <LinearGradient style={styles.container} colors={["#3D3B8E", "#000000"]}>
       {children}

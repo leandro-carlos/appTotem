@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { ReactNode } from "react";
 import { StyleSheet, ImageBackground, Platform } from "react-native";
 
@@ -11,13 +12,9 @@ export default function Background({ children }: BackgroundProps) {
   const sourceImage = require("../../assets/background.png");
 
   return (
-    <ImageBackground
-      defaultSource={sourceImage}
-      source={sourceImage}
-      style={styles.container}
-    >
+    <LinearGradient style={styles.container} colors={["#3D3B8E", "#000000"]}>
       {children}
-    </ImageBackground>
+    </LinearGradient>
   );
 }
 

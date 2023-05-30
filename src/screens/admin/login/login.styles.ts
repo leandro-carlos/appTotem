@@ -10,7 +10,7 @@ export const Container = styled.View`
 
 export const ContenModal = styled.View`
   width: 80%;
-  background-color: white;
+  background-color: #40598c;
   border-radius: 10px;
   height: 323px;
   margin-top: 30px;
@@ -22,9 +22,11 @@ export const ContenModal = styled.View`
 
 export const Input = styled(TextInput)`
   width: 80%;
-  border-bottom-width: 1px;
+  /* border-bottom-width: 1px; */
   margin: 15px 0px;
   padding: 5px 10px;
+  background-color: white;
+  border-radius: 4px;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -44,7 +46,10 @@ export const ButtonText = styled.Text`
   text-align: center;
 `;
 
-export const Image = styled.Image``;
+export const Image = styled.Image`
+  width: 50%;
+  height: 100px;
+`;
 
 export const TextForgot = styled.Text`
   color: #b3b3b3;

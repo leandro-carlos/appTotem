@@ -13,25 +13,16 @@ import Background from "../../../components/Background/Background";
 import { FlatList } from "react-native";
 import currentPasswordController from "../../../controllers/useCurrentPasswordController";
 import Header from "../../../components/Header/Header.screen";
+import { Tickets } from "../../../data/Tickets";
 
 export default function CurrentPassword() {
-  const { password, allPasswords, handleAllPassword, loading } =
-    currentPasswordController();
+  const { password } = currentPasswordController();
 
   return (
     <Background>
       <Header tittle="Sala de atendimento" />
 
       <Container>
-        {/* <Tittle tittle="A senha atual é: " />
-
-        <CardPassword>
-          <CardBallLeft />
-          <ContainerText>
-            <TextRight>{allPasswords ? allPasswords[0].Senha : ""}</TextRight>
-          </ContainerText>
-        </CardPassword> */}
-
         <Tittle tittle="A sua senha é: " />
 
         <CardPassword>
@@ -45,12 +36,8 @@ export default function CurrentPassword() {
 
         <Tittle tittle="Últimas chamadas" />
         <FlatList
-          data={allPasswords}
-          extraData={allPasswords}
-          onRefresh={() => {
-            handleAllPassword();
-          }}
-          refreshing={loading}
+          data={Tickets}
+          extraData={Tickets}
           numColumns={2}
           horizontal={false}
           showsHorizontalScrollIndicator={false}

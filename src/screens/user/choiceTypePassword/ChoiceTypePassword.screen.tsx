@@ -25,24 +25,24 @@ export default function ChoiceTypePassword() {
 
   return (
     <Background>
-      <Header tittle="Escolha o tipo de atendimento" />
+      <Header tittle="Tipo de atendimento" />
       <Container>
         <Button
           onPress={() => choiceType("0")}
-          text="PRIORITÁRIA"
-          buttonColor="#212AFF"
+          text="(SP) Senha Prioritária"
+          buttonColor="#B0E298"
         />
 
         <Button
           onPress={() => choiceType("1")}
-          text="GERAL"
-          buttonColor="#FF7A00"
+          text="(SG) Senha Geral"
+          buttonColor="#6883BA"
         />
 
         <Button
           onPress={() => choiceType("2")}
-          text="RETIRADA DE EXAMES"
-          buttonColor="#cdcdcd"
+          text="(RE) Retirar exame"
+          buttonColor="#E072A4"
         />
       </Container>
     </Background>

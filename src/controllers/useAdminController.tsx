@@ -9,21 +9,10 @@ export default function useAdminController() {
 
   function nextPassword() {
     setLoading(true);
-    api
-      .get("/chamar_senha")
-      .then((response) => {
-        setLoading(false);
-        console.log(response.data[0].ticket_number);
-        Alert.alert(
-          "Senha",
-          `A próxima senha é: ${response.data[0].ticket_number}`
-        );
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-        Alert.alert("Erro", "Não foi possível gerar a próxima senha.");
-      });
+    setTimeout(() => {
+      Alert.alert("Senha", `A próxima senha é: (SP) 41450 `);
+      setLoading(false);
+    }, 1000);
   }
 
   function nextReport() {

@@ -18,6 +18,7 @@ export default function Welcome() {
         <View style={styles.modalOpened}>
           <Image
             style={styles.imageWelcome}
+            resizeMode="contain"
             source={require("../../assets/imageWelcome.png")}
           />
 
@@ -58,15 +59,18 @@ const styles = StyleSheet.create({
   },
   modalOpened: {
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: "#40598C",
     height: "50%",
     width: "80%",
     borderRadius: 8,
     justifyContent: "space-evenly",
   },
-  imageWelcome: {},
+  imageWelcome: {
+    width: "50%",
+    height: 100,
+  },
   textWelcome: {
-    color: "#11A9FF",
+    color: "white",
     fontSize: 32,
   },
   buttonAtendimento: {
@@ -75,7 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#01D39B",
+    backgroundColor: "#519F2D",
     marginBottom: 20,
 
     shadowColor: "#000",
@@ -94,7 +98,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#11A9FF",
+    backgroundColor: "#716FC3",
 
     shadowColor: "#000",
     shadowOffset: {

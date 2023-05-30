@@ -16,15 +16,17 @@ export default function AdminHome() {
   const { nextPassword, loading, nextReport } = useAdminController();
   return (
     <Background>
-      <Header tittle="Gerenciar" />
+      <Header tittle="Adminstração" />
 
       <Container>
-        <Image source={require("../../../assets/imageWelcome.png")} />
+        <Image
+          resizeMode="contain"
+          source={require("../../../assets/imageWelcome.png")}
+        />
         <ContenModal>
           <ButtonOptions onPress={nextPassword}>
             <ButtonText>
-              {" "}
-              {loading ? <ActivityIndicator /> : "Chamar próxima senha"}{" "}
+              {loading ? <ActivityIndicator /> : "Chamar próxima senha"}
             </ButtonText>
           </ButtonOptions>
 
